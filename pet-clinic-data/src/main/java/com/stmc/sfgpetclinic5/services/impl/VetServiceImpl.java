@@ -2,9 +2,11 @@ package com.stmc.sfgpetclinic5.services.impl;
 
 import com.stmc.sfgpetclinic5.model.Vet;
 import com.stmc.sfgpetclinic5.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceImpl extends AbstractServiceImpl<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {

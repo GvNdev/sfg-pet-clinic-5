@@ -2,9 +2,11 @@ package com.stmc.sfgpetclinic5.services.impl;
 
 import com.stmc.sfgpetclinic5.model.Owner;
 import com.stmc.sfgpetclinic5.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceImpl extends AbstractServiceImpl<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
