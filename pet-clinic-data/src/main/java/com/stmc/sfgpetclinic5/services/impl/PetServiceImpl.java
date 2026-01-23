@@ -20,7 +20,7 @@ public class PetServiceImpl extends AbstractServiceImpl<Pet, Long> implements Pe
 
     @Override
     public Pet save(Pet object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
