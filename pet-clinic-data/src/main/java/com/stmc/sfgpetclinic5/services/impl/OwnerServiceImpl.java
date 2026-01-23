@@ -1,11 +1,11 @@
 package com.stmc.sfgpetclinic5.services.impl;
 
 import com.stmc.sfgpetclinic5.model.Owner;
-import com.stmc.sfgpetclinic5.services.CrudService;
+import com.stmc.sfgpetclinic5.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceImpl extends AbstractServiceImpl<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceImpl extends AbstractServiceImpl<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -29,5 +29,10 @@ public class OwnerServiceImpl extends AbstractServiceImpl<Owner, Long> implement
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }

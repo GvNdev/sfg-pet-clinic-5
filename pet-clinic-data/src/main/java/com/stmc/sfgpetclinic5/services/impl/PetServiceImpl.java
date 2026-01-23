@@ -1,11 +1,11 @@
 package com.stmc.sfgpetclinic5.services.impl;
 
 import com.stmc.sfgpetclinic5.model.Pet;
-import com.stmc.sfgpetclinic5.services.CrudService;
+import com.stmc.sfgpetclinic5.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceImpl extends AbstractServiceImpl<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceImpl extends AbstractServiceImpl<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
