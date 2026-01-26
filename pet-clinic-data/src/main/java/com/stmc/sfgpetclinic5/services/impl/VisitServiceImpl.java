@@ -2,16 +2,12 @@ package com.stmc.sfgpetclinic5.services.impl;
 
 import com.stmc.sfgpetclinic5.model.Visit;
 import com.stmc.sfgpetclinic5.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VisitServiceImpl extends AbstractServiceImpl<Visit, Long> implements VisitService {
-    private final VisitService visitService;
-
-    public VisitServiceImpl(VisitService visitService) {
-        this.visitService = visitService;
-    }
-
     @Override
     public Set<Visit> findAll() {
         return super.findAll();
