@@ -2,11 +2,13 @@ package com.stmc.sfgpetclinic5.services.impl;
 
 import com.stmc.sfgpetclinic5.model.Pet;
 import com.stmc.sfgpetclinic5.services.PetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class PetServiceImpl extends AbstractServiceImpl<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
