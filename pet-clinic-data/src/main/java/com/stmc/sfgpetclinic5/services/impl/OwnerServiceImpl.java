@@ -70,6 +70,10 @@ public class OwnerServiceImpl extends AbstractServiceImpl<Owner, Long> implement
 
     @Override
     public Owner findByLastName(String lastName) {
-        return null;
+        return this.findAll()
+                .stream()
+                .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
+                .findFirst()
+                .orElse(null);
     }
 }
