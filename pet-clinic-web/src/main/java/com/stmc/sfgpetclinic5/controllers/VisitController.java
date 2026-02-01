@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class VisitController {
@@ -44,11 +45,12 @@ public class VisitController {
     }
 
     @PostMapping("/owners/{ownerId}/pets/{petId}/visits/new")
-    public String processNewVisitForm(@Valid Visit visit, BindingResult result) {
+    public String processNewVisitForm(@Valid Visit visit, BindingResult result, RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
             return VIEWS_VISITS_CREATE_OR_UPDATE_FORM;
         } else {
             visitService.save(visit);
+            redirectAttributes.addFlashAttribute("visit", visit);
             return "redirect:/owners/{ownerId}";
         }
     }
